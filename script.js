@@ -1,12 +1,14 @@
 const products = [
-  {id:1,name:"Everyday Oversized Tee",category:"Fashion",price:699,emoji:"👕"},
+  {id:1,name:"Everyday Oversized Tee",category:"Fashion",price:999,emoji:"👕"},
   {id:2,name:"Wireless Headphones",category:"Gadgets",price:1499,emoji:"🎧"},
-  {id:3,name:"Minimal Desk Lamp",category:"Home",price:899,emoji:"💡"},
-  {id:4,name:"Everyday Tote Bag",category:"Fashion",price:799,emoji:"👜"},
+  {id:3,name:"Minimal Desk Lamp",category:"Home",price:999,emoji:"💡"},
+  {id:4,name:"Everyday Tote Bag",category:"Fashion",price:999,emoji:"👜"},
   {id:5,name:"Smart Watch",category:"Gadgets",price:1999,emoji:"⌚"},
   {id:6,name:"Aroma Candle Set",category:"Home",price:599,emoji:"🕯️"},
   {id:7,name:"Skincare Essentials",category:"Beauty",price:999,emoji:"🧴"},
-  {id:8,name:"Sunglasses",category:"Fashion",price:649,emoji:"🕶️"}
+
+{id:8,name:"Phones",category:"tech and gadgets ",price:14,999,emoji:"📱"},
+  {id:9,name:"Sunglasses",category:"Fashion",price:649,emoji:"🕶️"}
 ];
 
 let cart = JSON.parse(localStorage.getItem("zunopick-cart") || "[]");
