@@ -7,7 +7,7 @@ const products = [
   {id:6,name:"Aroma Candle Set",category:"Home",price:599,emoji:"🕯️"},
   {id:7,name:"Skincare Essentials",category:"Beauty",price:999,emoji:"🧴"},
 
-{id:8,name:"Phones",category:"tech and gadgets ",price:14,999,emoji:"📱"},
+{id:8,name:"Phones",category:"tech and gadgets ",price:14999,emoji:"📱"},
   {id:9,name:"Sunglasses",category:"Fashion",price:649,emoji:"🕶️"}
 ];
 
