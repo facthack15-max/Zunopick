@@ -23,19 +23,43 @@ function renderProducts(){
     (currentCategory === "All" || p.category === currentCategory) &&
     (p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q))
   );
-  productsEl.innerHTML = list.length ? list.map(p => `
-    <article class="product">
-      <div class="product-img">${p.emoji}</div>
-      <div class="product-info">
-        <small>${p.category}</small>
-        <h3>${p.name}</h3>
-        <div class="price">₹${p.price.toLocaleString("en-IN")}</div>
-        <div class="product-actions">
-          <button onclick="addToCart(${p.id})">Add to cart</button>
-          <button class="buy" onclick="buyNow(${p.id})">Buy Now</button>
-        </div>
+  productsEl.innerHTML = list.length ?
+list.map(p => `
+  <article class="product">
+
+    <div class="product-img">
+      ${p.emoji}
+      <button class="wishlist" onclick="toggleWishlist(${p.id}, this)">♡</button>
+    </div>
+
+    <div class="product-info">
+      <small>${p.category}</small>
+
+      <h3>${p.name}</h3>
+
+      <div class="price">
+        ₹${p.price.toLocaleString("en-IN")}
       </div>
-    </article>`).join("") : "<p>No products found. Try another search.</p>";
+
+      <div class="product-actions">
+
+        <button onclick="viewDetails(${p.id})">
+          👁️ Details
+        </button>
+
+        <button onclick="addToCart(${p.id})">
+          🛒 Add to cart
+        </button>
+
+        <button class="buy" onclick="buyNow(${p.id})">
+          ⚡ Buy Now
+        </button>
+
+      </div>
+    </div>
+
+  </article>
+`).join("") : "<p>No products found. Try another search.</p>";
 }
 function addToCart(id){
   const p = products.find(x => x.id === id);
