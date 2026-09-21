@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZunoPick - Discover products worth picking.">
+  <title>ZunoPick — Pick What You Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">Zuno<span>Pick</span></a>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#deals">Deals</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DISCOVER • PICK • SHOP</p>
+        <h1>Find it.<br><span>Pick it.</span><br>Love it.</h1>
+        <p class="hero-text">Discover handpicked products across fashion, gadgets, home, beauty and more.</p>
+        <a class="primary-btn" href="#shop">Explore Picks →</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-badge">ZunoPick<br><small>Editor's Pick</small></div>
+        <div class="hero-product">✦</div>
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">BROWSE</p><h2>Shop by category</h2></div>
+      </div>
+      <div class="categories">
+        <button class="category active" data-category="All">✨ <span>All</span></button>
+        <button class="category" data-category="Fashion">👕 <span>Fashion</span></button>
+        <button class="category" data-category="Gadgets">🎧 <span>Gadgets</span></button>
+        <button class="category" data-category="Home">🏠 <span>Home</span></button>
+        <button class="category" data-category="Beauty">✨ <span>Beauty</span></button>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">CURATED FOR YOU</p><h2>Today's picks</h2></div>
+        <input id="search" class="search" type="search" placeholder="Search products...">
+      </div>
+      <div id="products" class="products"></div>
+    </section>
+
+    <section id="deals" class="deal-banner">
+      <div><p class="eyebrow">ZUNOPICK DEALS</p><h2>Good finds. Better prices.</h2><p>Handpicked deals from stores you already know.</p></div>
+      <a class="primary-btn" href="#shop">Shop deals</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">Zuno<span>Pick</span></div>
+    <p>Pick What You Love.</p>
+    <small>© 2026 ZunoPick. Product links may be affiliate links.</small>
+  </footer>
+
+  <div id="cartPanel" class="cart-panel">
+    <div class="cart-top"><h3>Your picks</h3><button id="closeCart">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-bottom"><strong>Total: ₹<span id="cartTotal">0</span></strong><button class="primary-btn" id="checkoutBtn">Continue</button></div>
+  </div>
+  <div id="overlay" class="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
